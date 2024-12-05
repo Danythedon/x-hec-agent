@@ -1,9 +1,10 @@
 FROM python:3.11
 
+WORKDIR /src
+
 # Copy all source code
 COPY . .
 
-WORKDIR /src
 RUN pip install -r requirements.txt
 
 
