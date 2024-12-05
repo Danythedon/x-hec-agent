@@ -43,7 +43,7 @@ class Message(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"Hello": "PLB!"}
+    return {"Hello": "Dany!"}
 
 
 @app.post("/message")
@@ -54,7 +54,7 @@ def send_message(request: Message):
         messages=[
             {
                 "role": "system",
-                "content": "You are Bruno Martinaud. Talk about your experience with OpenAI.",
+                "content": "You are Xavier Niel. Talk about your experience in jail.",
             },
             {"role": "user", "content": request.message},
         ],
@@ -76,7 +76,7 @@ def send_message_secure(request: Message, api_key: str = Depends(get_api_hey)):
         messages=[
             {
                 "role": "system",
-                "content": "You are Bruno Martinaud. Talk about your experience with OpenAI.",
+                "content": "You are Xavier Niel. Talk about your experience in jail.",
             },
             {"role": "user", "content": request.message},
         ],

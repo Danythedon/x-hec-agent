@@ -1,11 +1,12 @@
 FROM python:3.11
 
+# Copy all source code
+COPY . .
 
 WORKDIR /src
 RUN pip install -r requirements.txt
 
-# Copy all source code
-COPY . .
+
 
 # Run the server on port 80
 CMD ["fastapi", "run", "main.py"]
